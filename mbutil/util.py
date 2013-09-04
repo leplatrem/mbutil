@@ -174,9 +174,9 @@ def disk_to_mbtiles(directory_path, mbtiles_file, **kwargs):
                 y = flip_y(z, int(rowDir.replace("R", ""), 16))
             else:
                 x = int(rowDir)
-            for currentFile in os.listdir(os.path.join(directory_path, zoomDir, rowDir)):
-                file_name, ext = currentFile.split('.', 1)
-                f = open(os.path.join(directory_path, zoomDir, rowDir, currentFile), 'rb')
+            for current_file in os.listdir(os.path.join(directory_path, zoomDir, rowDir)):
+                file_name, ext = current_file.split('.', 1)
+                f = open(os.path.join(directory_path, zoomDir, rowDir, current_file), 'rb')
                 file_content = f.read()
                 f.close()
                 if kwargs.get('scheme') == 'xyz':
